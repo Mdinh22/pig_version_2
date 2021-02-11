@@ -1,7 +1,7 @@
 import random
 
 
-class player:
+class Player:
     """Custom class to track player name and score."""
 
     def __init__(self, name, score):
@@ -9,17 +9,17 @@ class player:
         self.score = score
 
 
-def take_name(name) -> player:
+def take_name(name) -> Player:
     """Constructor for a new player object."""
-    new_player = player(name, 0)
+    new_player = Player(name, 0)
     return new_player
 
 
-assert type(take_name("test_player")) == player
+assert type(take_name("TestPlayer")) == Player
 
 
 def roll_pig() -> list:
-    """ Rolls a pig, taking two results from five
+    """Rolls a pig, taking two results from five
     possible outcomes, with repeats possible."""
     potential_results = ["Sider", "Razorback", "Trotter",
                          "Snouter", "Leaning Jowler"]
@@ -113,8 +113,8 @@ def get_result(roll_results, rolling_player, other_player) -> list:
                 " and " + roll_results[1], 0]
 
 
-assert_player1 = player("Assert1", 0)
-assert_player2 = player("Assert2", 0)
+assert_player1 = Player("Assert1", 0)
+assert_player2 = Player("Assert2", 0)
 assert get_result(["Snouter", "Snouter"],
                   assert_player1, assert_player2)[1] in [0, 1, 2]
 
@@ -160,7 +160,7 @@ if __name__ == "__main__":
     print("Welcome to the game of pig!")
     print("...........................")
 
-    p1_name = input("Please enter the first player's name. ")
+    p1_name = input("Let's get the first player's name. ")
     player_one = take_name(p1_name)
     p2_name = input("Now for the second player. ")
     player_two = take_name(p2_name)
