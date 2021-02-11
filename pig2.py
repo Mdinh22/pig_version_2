@@ -160,7 +160,7 @@ if __name__ == "__main__":
     print("Welcome to the game of pig!")
     print("...........................")
 
-    p1_name = input("Let's get the first player's name. ")
+    p1_name = input("Please enter the first player's name. ")
     player_one = take_name(p1_name)
     p2_name = input("Now for the second player. ")
     player_two = take_name(p2_name)
