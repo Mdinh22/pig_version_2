@@ -15,7 +15,7 @@ def take_name(name) -> player:
     return new_player
 
 
-assert type(take_name("TestPlayer")) == player
+assert type(take_name("test_player")) == player
 
 
 def roll_pig() -> list:
